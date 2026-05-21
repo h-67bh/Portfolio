@@ -54,11 +54,55 @@
 							
 							<span class="image main"><img src="images/project.jpg" alt="" /></span>
 							<hr />
+
+								<div id="main">
+							    <div class="inner">
+							        <hr />
+							        
+							        <h1 id="uk-rail-project">Project 1</h1>
+							        <h2><a href="project.html/#uk-rail-project">Machine Learning for Revenue Protection in UK Rail Logistics(Delay-Triggered Liability Engine)</a></h2>
+							        <span class="image main"><img src="images/rail-project.png" alt="UK Rail Disruption Dashboard" /></span>
+							        
+							        <p>
+							            An end-to-end XGBoost machine learning pipeline and interactive Streamlit application to predict passenger refund behavior and quantify real-time financial revenue leakage during transit delays.
+							        </p>
+							
+							        <h3>The Strategic Business Problem</h3>
+							        <ul>
+							            <li><strong>Flawed Operational Metrics:</strong> Transport logistics typically measure failure in minutes. A 20-minute delay on £150 First Class tickets creates massive liability, whereas a 40-minute delay on £10 tickets creates very little.</li>
+							            <li><strong>Strategic Shift:</strong> Moves crisis management from measuring lost time to predicting direct financial liability.</li>
+							            <li><strong>Behavioral Economics:</strong> Maps the exact psychological and financial tipping points that cause a delayed passenger to demand a refund, enabling hard balance-sheet triage.</li>
+							        </ul>
+							
+							        <h3>Tech Stack & Tools</h3>
+							        <ul>
+							            <li><strong>Machine Learning:</strong> XGBoost, Scikit-learn</li>
+							            <li><strong>Data Pipeline:</strong> Python 3, Pandas</li>
+							            <li><strong>Deployment:</strong> Streamlit, Heroku</li>
+							        </ul>
+							
+							        <h3>Data Pipeline & Architecture</h3>
+							        <ul>
+							            <li><strong>Data Isolation (Phase A):</strong> Aggressively filtered datasets to prevent mathematical paradoxes. Dropped "Cancelled" trains (deterministic 100% liability obscures behavioral data), "On-Time" rows (inflates baseline accuracy), and operational "Reason for Delay" (prevents data leakage).</li>
+							            <li><strong>Feature Engineering (Phase B):</strong> Converted raw arrival strings into continuous `Delay Minutes`, programmatically fixing negative-time inversions for midnight crossings. Extracted `Departure Hour` to capture peak vs. off-peak behavioral shifts.</li>
+							            <li><strong>XGBoost Model (Phase C):</strong> Implemented class-weight scaling (`scale_pos_weight`) to penalize the algorithm for missing valid refund claims in a heavily imbalanced dataset. Restricted tree depth to prevent overfitting on the 2.2K row dataset.</li>
+							            <li><strong>Model Performance:</strong> Achieved 95% Recall (identifying 95% of actual refund demands) and 90% Precision.</li>
+							        </ul>
+							
+							        <h3>Live Application Dashboard</h3>
+							        <ul>
+							            <li><strong>Decoupled Deployment:</strong> The Streamlit app imports the pre-trained `.pkl` XGBoost model to generate instant predictions without retraining.</li>
+							            <li><strong>Dynamic Inputs:</strong> Dispatchers input Geography (cascading station logic), Disruption Severity (delay minutes, time), and Ticket Profiles (class, railcard, type).</li>
+							            <li><strong>Actionable Outputs:</strong> The engine outputs the Predicted Claim Probability, the Projected Financial Liability (£), and triggers a visual Risk Alert System (Red/Yellow/Green) for immediate operational triage.</li>
+							        </ul>
+							
+							        <button style="background-color: #e0e0e0; margin-right: 15px;"><a href="https://hrithik-ukt-6dcb8cde31ef.herokuapp.com/" target="_blank">Live Application</a></button> <button style="background-color: #e0e0e0;"><a href="#">https://github.com/h-67bh/uk-rail-disruption-liability-engine</a>Github</button>
+							    </div>
+							</div>
 							<div id="main">
 						    <div class="inner">
 						        <hr />
-						        
-						        <h1 id="airbnb-project">Project 0</h1>
+						        <h1 id="airbnb-project">Project 2</h1>
 						        <h2><a href="project.html/#airbnb-project">Paris Airbnb Market Analysis</a></h2>
 						        <span class="image main"><img src="images/airbnb.png" alt="Paris Airbnb Data Visualization" /></span>
 						        
@@ -93,7 +137,7 @@
 						    </div>
 						</div>
 							<hr />
-                            <h1 id="project1">Project 1</h1>
+                            <h1 id="project1">Project 3</h1>
                             <h2><a href="project.html#project1">Movie recommendation project</a></h2>
                             <span class="image main"><img src="images/movie.png" alt="" /></span>
 							    <p>This project focuses on building a movie recommendation system that helps users discover films similar to their interests. The core idea is to suggest movies based on similarity rather than popularity, making recommendations more personalized and relevant. The system uses a content-based filtering approach, where movies are recommended by analyzing features such as genres, keywords, cast, and overview, and measuring their similarity using vectorization techniques and cosine similarity.</p>
@@ -110,7 +154,7 @@
 							
 							
 							<hr />
-                            <h1 id="project2">Project 2</h1>
+                            <h1 id="project2">Project 4</h1>
                             <h2><a href="project.html/#project2">Email/SMS spam classification project</a></h2>
                             <span class="image main"><img src="images/spam.png" alt="" /></span>
 							<p>
@@ -147,7 +191,7 @@
 							
 							
 							<hr />
-                            <h1 id="project3">Project 3</h1>
+                            <h1 id="project3">Project 5</h1>
                             <h2><a href="project.html/#project3">Car price prediction project</a></h2>
                             <span class="image main"><img src="images/car.png" alt="" /></span>
 							<p>Built a complete end-to-end machine learning application that predicts used car prices based on real-world market data, taking the project from raw messy data all the way through to a fully deployed, interactive web product. The foundation of the project was a real Quikr used car dataset, which required significant data cleaning and preprocessing — handling missing values, removing outliers, standardising inconsistent entries for kilometres driven and pricing, and ensuring the data was in a reliable state before any modelling began. Using pandas and NumPy throughout, I performed exploratory data analysis to understand the distribution of key variables such as car age, fuel type, brand, and usage, identifying the features most predictive of resale price.</p>
@@ -164,7 +208,7 @@
 							
 							
 							<hr />
-                            <h1 id="project4">Project 4</h1>
+                            <h1 id="project4">Project 6</h1>
                             <h2><a href="project.html/#project4">Currency converter Chatbot</a></h2>
                             <span class="image main"><img src="images/chatbot.png" alt="" /></span>
 							<p>
@@ -201,7 +245,7 @@
 					<div id="main">
 						<div class="inner">
 							<hr />
-                            <h1 id="project1">Project 5</h1>
+                            <h1 id="project1">Project 7</h1>
                             <h2><a href="project.html#project1">Retail Customer Behavior and Shopping Trends</a></h2>
                             <span class="image main"><img src="images/dashboard.png" alt="" /></span>
 							<p>End To End Data Analytics Project using SQL, Python, Power BI, Project Report, GitHub | Company-Level Data Analyst Project 📌 Project Overview The goal of this project is to simulate a corporate-grade end-to-end data analytics workflow, demonstrating the ability to translate raw data into strategic business intelligence by: </p>
